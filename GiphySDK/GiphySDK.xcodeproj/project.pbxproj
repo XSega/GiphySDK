@@ -10,6 +10,9 @@
 		46BA0A28234CB09200014BA1 /* GiphySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BA0A1E234CB09100014BA1 /* GiphySDK.framework */; };
 		46BA0A2D234CB09200014BA1 /* GiphySDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA0A2C234CB09200014BA1 /* GiphySDKTests.swift */; };
 		46BA0A2F234CB09200014BA1 /* GiphySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 46BA0A21234CB09100014BA1 /* GiphySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46BA0AD1234CB36600014BA1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA0AD0234CB36600014BA1 /* APIClient.swift */; };
+		46BA0AD3234CB48C00014BA1 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA0AD2234CB48C00014BA1 /* APISession.swift */; };
+		46BA0AD5234CB95900014BA1 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA0AD4234CB95900014BA1 /* APIClientError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		46BA0A27234CB09200014BA1 /* GiphySDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiphySDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BA0A2C234CB09200014BA1 /* GiphySDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphySDKTests.swift; sourceTree = "<group>"; };
 		46BA0A2E234CB09200014BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46BA0AD0234CB36600014BA1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		46BA0AD2234CB48C00014BA1 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		46BA0AD4234CB95900014BA1 /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		46BA0A20234CB09100014BA1 /* GiphySDK */ = {
 			isa = PBXGroup;
 			children = (
+				46BA0AD2234CB48C00014BA1 /* APISession.swift */,
+				46BA0AD0234CB36600014BA1 /* APIClient.swift */,
+				46BA0AD4234CB95900014BA1 /* APIClientError.swift */,
 				46BA0A21234CB09100014BA1 /* GiphySDK.h */,
 				46BA0A22234CB09100014BA1 /* Info.plist */,
 			);
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					46BA0A1D234CB09100014BA1 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					46BA0A26234CB09200014BA1 = {
 						CreatedOnToolsVersion = 11.0;
@@ -195,6 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BA0AD1234CB36600014BA1 /* APIClient.swift in Sources */,
+				46BA0AD5234CB95900014BA1 /* APIClientError.swift in Sources */,
+				46BA0AD3234CB48C00014BA1 /* APISession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +353,7 @@
 		46BA0A33234CB09200014BA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.si.GiphySDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +378,7 @@
 		46BA0A34234CB09200014BA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,6 +402,7 @@
 		46BA0A36234CB09200014BA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GiphySDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +420,7 @@
 		46BA0A37234CB09200014BA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GiphySDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
