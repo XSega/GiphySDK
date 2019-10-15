@@ -13,11 +13,10 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+
 		let config = APIClientConfig(apiKey: "pkzR9y9XVaDRZNn1WcdzjNvLUXh15n0T")
 		let apiClient = APIClient(config: config)
-		apiClient.get(path: "gifs/random", parameters: [:]) { (result) in
-			
+		apiClient.get(path: "gifs/random", parameters: [:]) { (result) in			
 		}
 	}
 
