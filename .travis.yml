@@ -1,0 +1,16 @@
+language: objective-c
+os: osx
+osx_image: xcode11
+
+script:
+  xcodebuild test -workspace Giphy.xcworkspace -scheme GiphySDKTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+#xcode_project: GiphySDK/GiphySDK.xcodeproj
+#xcode_scheme: GiphySDK
+#xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
+
+branches:
+  only:
+  - master
+  - develop
